@@ -1,0 +1,12 @@
+
+git clone https://github.com/fabiograssiotto/INF-0077.git
+pip install dvc-gdrive
+dvc init
+dvc remote add -d gdrive gdrive://1Pis_hAFuJADGfu5UJ7Ynt26jj51mDq7M -f
+dvc add ds
+dvc add Untitled-1.py 
+git add
+git commit -m "Add DVC data"
+git push origin main
+dvc push
+
