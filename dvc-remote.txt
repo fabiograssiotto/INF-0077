@@ -1,0 +1,1 @@
+dvc remote add -d gdrive gdrive://1Pis_hAFuJADGfu5UJ7Ynt26jj51mDq7M -f
