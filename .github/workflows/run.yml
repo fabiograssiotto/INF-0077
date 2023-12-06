@@ -1,0 +1,20 @@
+# Workflow para o treinamento do modelo.
+
+name: Treinamento e Report
+
+on: [push]
+
+jobs:
+  config-e-executa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - uses: iterative/setup-dvc@v1
+      - name: Treinamento
+        run: |  
+          pip install -r requirements.txt
+          dvc pull data --run-cache
+          python T1/data/Untitled-1.py
