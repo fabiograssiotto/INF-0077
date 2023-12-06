@@ -14,9 +14,9 @@ jobs:
         with:
           python-version: '3.9'
           cache: 'pip' # caching pip dependencies
-      - name: Get directory
-        run: ls
       - uses: iterative/setup-dvc@v1
+      - name: Get directory
+        run: ls T1/data
       - name: Treinamento
         working-directory: T1/data
         env:
