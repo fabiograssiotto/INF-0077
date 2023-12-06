@@ -2,8 +2,9 @@
 
 name: Treinamento e Report
 
-on: [push]
-
+on:
+   workflow_dispatch: 
+   
 jobs:
   config-e-executa:
     runs-on: windows-latest
