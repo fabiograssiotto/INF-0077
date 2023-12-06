@@ -14,7 +14,11 @@ jobs:
           python-version: '3.11'
       - uses: iterative/setup-dvc@v1
       - name: Treinamento
+        working-directory: T1/data
+        env:
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SECRET }}
         run: |  
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          dvc pull data --run-cache
-          python T1/data/Untitled-1.py
+          dvc pull
+          python Untitled-1.py
