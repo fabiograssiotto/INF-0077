@@ -20,13 +20,13 @@ jobs:
         env:
           GDRIVE_CREDENTIALS_DATA: "${{ secrets.GDRIVE_SECRET }}"
         run: |
-          dvc pull --verbose --allow-missing
+          dvc pull --verbose
       - name: Dvc Pull 2
         working-directory: T1/data
         env:
           GDRIVE_CREDENTIALS_DATA: "${{ secrets.GDRIVE_SECRET }}"
         run: |
-          dvc pull --verbose --allow-missing
+          dvc pull --verbose
       - name: Listagem de Arquivos
         run: ls T1/data
       - name: Treinamento
