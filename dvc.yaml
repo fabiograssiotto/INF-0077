@@ -1,0 +1,5 @@
+stages:
+  prepare:
+    cmd: python T1/data/Untitled-1.py
+    outs:
+      - T2/results.txt
