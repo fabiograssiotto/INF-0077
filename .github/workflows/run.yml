@@ -16,12 +16,11 @@ jobs:
           cache: 'pip'
       - uses: iterative/setup-dvc@v1
       - name: Dvc Pull
-        continue-on-error: true
         working-directory: T1/data
         env:
           GDRIVE_CREDENTIALS_DATA: "${{ secrets.GDRIVE_SECRET }}"
         run: |
-          dvc pull --verbose
+          dvc pull --verbose --allow-missing
       - name: Listagem de Arquivos
         run: ls T1/data
       - name: Treinamento
