@@ -1,0 +1,9 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python T1/data/Untitled-1.py > T2/results.txt
+    outs:
+    - path: T2/results.txt
+      hash: md5
+      md5: e33619f1ca144375f2d8b2226d51e35e
+      size: 111053
